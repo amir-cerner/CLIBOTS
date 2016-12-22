@@ -1,11 +1,11 @@
 --[[
 
      **************************
-     *  BlackPlus Plugins...  *
+     *  NOD32      Plugins...  *
      *                        *
-     *     By @MehdiHS        *
+     *     By @MRCLIAPI        *
      *                        *
-     *  Channel > @Black_Ch   *
+     *     CerNER TEAM        *
      **************************
 	 
 ]]
@@ -26,11 +26,11 @@ return {
 --[[
 
      **************************
-     *  BlackPlus Plugins...  *
+     *  NOD32     Plugins...  *
      *                        *
-     *     By @MehdiHS        *
+     *     By @MRCLIAPI       *
      *                        *
-     *  Channel > @Black_Ch   *
+                *
      **************************
 	 
 ]]
