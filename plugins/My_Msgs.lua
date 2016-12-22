@@ -79,7 +79,7 @@ local chat_id = msg.to.id
 end
   return {
     patterns = {
-      "^[#!/](me)$",
+      "^(me)$",
     },
     run = run
   }
