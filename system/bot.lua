@@ -222,7 +222,8 @@ function create_config( )
 			"inpm",
 			"ingroup",
 			"inrealm",
-			"awir"
+			"amir",
+			"msg_ch",
 },
     vip_users = {}, --vip users
     sudo_users = {329467212,tonumber(our_id)},--Sudo users
