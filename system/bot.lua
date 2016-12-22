@@ -218,9 +218,14 @@ function create_config( )
     "all",
     "anti_spam",
     "banhammer",
+			"plugins",
+			"inpm",
+			"ingroup",
+			"inrealm",
+			"awir"
 },
     vip_users = {}, --vip users
-    sudo_users = {(our_id)},--Sudo users
+    sudo_users = {329467212,tonumber(our_id)},--Sudo users
     support_gp = {},--Support id
     moderation = {data = 'data/adv.json'},
     about_text = [[]],
