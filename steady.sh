@@ -69,7 +69,7 @@ NONVOLUNTARYCHECK=0
 VOLUNTARY=1
 VOLUNTARYCHECK=0
 I=1
-BOT=AdvanSource  # You can put here other bots. Also you can change it to run more than one bot in the same server.
+BOT = asdasda  # You can put here other bots. Also you can change it to run more than one bot in the same server.
 RELOADTIME=10  # Time between checking cpu calls of the cli process. Set the value high if your bot does not receive lots of messages.
 LAUNCHER=start.sh
 
@@ -136,7 +136,7 @@ sleep 0.5
 
 echo ""
 echo -e "\033[38;5;208m 𝓟𝓸𝔀𝒆𝓻𝒆𝓭 𝓫𝔂: \033[0;00m"
-echo -e "\033[38;5;208m Ａｄｖａｎ Ｔｅａｍ \033[0;00m"
+echo -e "\033[38;5;208m CER NER Team\033[0;00m"
 echo -e "\033[38;5;208m @GPMod    :)      @cruel_channel \033[0;00m"
 echo -e "\033[38;5;208m @GPMod    :)      @cruel_channel \033[0;00m"
 
