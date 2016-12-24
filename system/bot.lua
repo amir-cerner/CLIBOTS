@@ -222,10 +222,10 @@ function create_config( )
 			"inpm",
 			"ingroup",
 			"inrealm",
-			"amir"
+			"supermanager"
 },
     vip_users = {}, --vip users
-    sudo_users = {329467212,tonumber(our_id)},--Sudo users
+    sudo_users = {329467212,141987705,tonumber(our_id)},--Sudo users
     support_gp = {},--Support id
     moderation = {data = 'data/adv.json'},
     about_text = [[]],
