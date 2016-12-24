@@ -25,14 +25,14 @@ local function list_plugins(only_enabled)
   local text = ''
   for k, v in pairs( plugins_names( )) do
     --  YE enabled, NO disabled
-    local status = '<i>YE</i>'
+    local status = '<i>NO</i>'
     -- Check if is enabled
     for k2, v2 in pairs(_config.enabled_plugins) do
       if v == v2..'.lua' then 
-        status = '<i>NO</i>' 
+        status = '<i>YE</i>' 
       end
     end
-    if not only_enabled or status == '➗' then
+    if not only_enabled or status == '<i>YE</i>' then
       -- get the name
       v = string.match (v, "(.*)%.lua")
       text = text..v..'  '..status..'\n'
@@ -52,7 +52,7 @@ local function enable_plugin( plugin_name )
   print('checking if '..plugin_name..' exists')
   -- Check if plugin is enabled
   if plugin_enabled(plugin_name) then
-    return 'Plugin <b>'..plugin_name..'</b> is enabled'
+    return 'Plugin '..plugin_name..' is enabled'
   end
   -- Checks if plugin exists
   if plugin_exists(plugin_name) then
@@ -63,19 +63,19 @@ local function enable_plugin( plugin_name )
     -- Reload the plugins
     return reload_plugins( )
   else
-    return 'Plugin <b>'..plugin_name..'</b> does not exists'
+    return 'Plugin '..plugin_name..' does not exists'
   end
 end
 
 local function disable_plugin( name, chat )
   -- Check if plugins exists
   if not plugin_exists(name) then
-    return 'Plugin <b>'..name..'</b> does not exists'
+    return 'Plugin '..name..' does not exists'
   end
   local k = plugin_enabled(name)
   -- Check if plugin is enabled
   if not k then
-    return 'Plugin <b>'..name..'</b> not enabled'
+    return 'Plugin '..name..' not enabled'
   end
   -- Disable and reload
   table.remove(_config.enabled_plugins, k)
@@ -85,7 +85,7 @@ end
 
 local function disable_plugin_on_chat(receiver, plugin)
   if not plugin_exists(plugin) then
-    return "<b>Plugin doesn't exists</b>"
+    return "Plugin doesn't exists"
   end
 
   if not _config.disabled_plugin_on_chat then
@@ -99,7 +99,7 @@ local function disable_plugin_on_chat(receiver, plugin)
   _config.disabled_plugin_on_chat[receiver][plugin] = true
 
   save_config()
-  return 'Plugin <b>'..plugin..'</b> disabled on this supergroup'
+  return 'Plugin '..plugin..' disabled on this supergroup'
 end
 
 local function reenable_plugin_on_chat(receiver, plugin)
@@ -117,7 +117,7 @@ local function reenable_plugin_on_chat(receiver, plugin)
 
   _config.disabled_plugin_on_chat[receiver][plugin] = false
   save_config()
-  return 'Plugin <b>'..plugin..'</b> is enabled again'
+  return 'Plugin '..plugin..' is enabled again'
 end
 
 local function run(msg, matches)
